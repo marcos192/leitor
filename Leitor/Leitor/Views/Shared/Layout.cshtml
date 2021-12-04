@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @RenderSection("style", false)
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="page-header bg-danger">
+                <h1>
+                    teste
+                    <small class="text-danger">
+                        Utilizando teste
+                    </small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-3 col-md-3 bg-success">
+                <ul class="nav nav-pills nav-stacked">
+                    <li id="liHome" role="presentation" class="ative"><a href="#">Home</a></li>
+                    <li id="id" role="presentation">@Html.ActionLink("Leitor", "Index", "Leitor")</li>
+                </ul>
+            </div>
+
+            <div class="col-xs-9 col-md-9">
+                <br />
+                @RenderBody()
+            </div>
+
+            <br />
+            <div class="row">
+                <div class="col-xs-12 col-md-12 bg-danger">
+                    <small>Layout teste</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    
+    @RenderSection("ScriptPage", false);
+
+</body>
+</html>
